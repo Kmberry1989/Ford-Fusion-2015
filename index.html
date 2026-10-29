@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>2015 Ford Fusion Maintenance Guide</title>
+  <meta name="description" content="Accessible 2015 Ford Fusion maintenance guide with source-linked specifications, an owner's manual reader, and manual-source links. Covers the 1.5L EcoBoost, 2.0L EcoBoost, 2.5L, and Hybrid/Energi notes.">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">F</span><div><p class="eyebrow">2015 • U.S. owner's manual</p><h1>Fusion Maintenance Guide</h1></div></div>
+      <nav class="primary-nav" aria-label="Guide views">
+        <button type="button" class="nav-button is-active" data-view="guide" aria-current="page">Guide</button>
+        <button type="button" class="nav-button" data-view="reader">Reader mode</button>
+        <button type="button" class="nav-button" data-view="manual">Manual sources</button>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap" tabindex="-1">
+    <div class="intro">
+      <div><p class="eyebrow">Source-linked reference</p><h2 id="view-heading">Find the part. Check the source.</h2><p id="view-description">Explore a vehicle zone or search the guide. Each entry points back to the 2015 owner's manual. Page numbers are the printed manual pages; in the 488-page gasoline PDF they are 3 pages higher.</p></div>
+      <a class="workshop-link" href="https://www.ford.com/support/vehicle/fusion/2015/discover-your-ford/">Ford official 2015 Fusion support <span aria-hidden="true">↗</span></a>
+    </div>
+    <section id="guide-view" class="view" aria-labelledby="view-heading">
+      <section class="panel vehicle-panel" aria-labelledby="vehicle-heading">
+        <div class="panel-heading"><div><p class="eyebrow">Vehicle map</p><h3 id="vehicle-heading">Explore the Fusion</h3><p>Choose a view, then select a zone. The zone list provides the same controls without the image. Diagrams are simple sedan outlines made for this guide, not Ford artwork.</p></div><button type="button" id="clear-zone" class="quiet-button" hidden>Clear zone filter</button></div>
+        <div id="car-views" class="segmented" role="group" aria-label="Vehicle view">
+          <button type="button" data-car-view="side" aria-pressed="true">Side</button>
+          <button type="button" data-car-view="front" aria-pressed="false">Front</button>
+          <button type="button" data-car-view="back" aria-pressed="false">Back</button>
+          <button type="button" data-car-view="vehicle" aria-pressed="false">Vehicle</button>
+        </div>
+        <div class="diagram-layout"><div class="diagram-frame"><img id="car-image" src="SVG/Side.svg" alt="Side illustration of a 2015 Ford Fusion sedan" width="1261" height="832"><div id="diagram-hotspots" class="diagram-hotspots" aria-label="Vehicle zones"></div></div><div class="zone-list"><h4>Vehicle zones</h4><div id="zone-buttons" class="zone-buttons"></div></div></div>
+      </section>
+      <section class="guide-section" aria-labelledby="cards-heading">
+        <div class="section-head"><div><p class="eyebrow">Specifications and procedures</p><h3 id="cards-heading">Maintenance entries</h3><p id="results-count" aria-live="polite"></p></div><div class="filters"><label for="guide-search">Search entries</label><input id="guide-search" type="search" placeholder="Bulb, oil, brake…" autocomplete="off"><label for="category-filter">Category</label><select id="category-filter"><option value="all">All categories</option><option value="bulb">Bulbs and lighting</option><option value="socket">Fasteners and torque</option><option value="fluid">Fluids and filters</option><option value="quirk">Diagnosis notes</option></select></div></div>
+        <div id="guide-cards" class="card-grid"></div>
+      </section>
+    </section>
+    <section id="reader-view" class="view" aria-labelledby="view-heading" hidden>
+      <div class="reader-layout"><aside class="reader-nav panel" aria-label="Reader sections"><h3>In this reader</h3><nav id="reader-toc" aria-label="Maintenance topics"></nav></aside><div class="reader-content"><div class="reader-tools panel"><div><p class="eyebrow">Accessible reading view</p><p>Owner checks, scheduled maintenance, and relevant specification tables, written as concise HTML entries. Open the cited printed page for the full table or procedure.</p></div><div class="reader-size"><label for="reader-font-size">Text size</label><select id="reader-font-size"><option value="normal">Standard</option><option value="large">Large</option><option value="larger">Extra large</option></select></div></div><div id="reader-entries"></div></div></div>
+    </section>
+    <section id="manual-view" class="view" aria-labelledby="view-heading" hidden>
+      <div class="manual-intro panel"><div><p class="eyebrow">Original source</p><h3>2015 U.S. owner's manual</h3><p id="manual-page-note">Scheduled maintenance starts at printed page 458 in the gasoline manual. No owner's manual PDF is bundled in this repo, so the viewer below only activates if you add one (see README). Use the official and online-viewer links for the full manual.</p></div><a id="open-pdf" href="https://www.ford.com/support/vehicle/fusion/2015/discover-your-ford/" target="_blank" rel="noopener">Ford official support <span aria-hidden="true">↗</span></a></div>
+      <div class="manual-intro panel"><div><p class="eyebrow">Online viewer</p><h3>488-page gasoline manual, by printed page</h3><p>Printed page + 3 = PDF page in that edition (for example, printed p. 463 is PDF p. 466). The Hybrid/Energi manual is a separate 498-page edition with its own pagination.</p></div><a href="https://www.manualsdir.com/manuals/601988/ford-2015-fusion.html" target="_blank" rel="noopener">Open online viewer <span aria-hidden="true">↗</span></a></div>
+      <div class="pdf-shell panel"><div class="pdf-controls" aria-label="PDF controls"><div class="pdf-navigation"><button type="button" id="pdf-prev" aria-label="Previous PDF page">← Previous</button><label for="pdf-page">Page</label><input id="pdf-page" type="number" min="1" max="488" value="466" inputmode="numeric"><span id="pdf-page-count">of 488</span><button type="button" id="pdf-next" aria-label="Next PDF page">Next →</button></div><div class="pdf-zoom"><label for="pdf-zoom">Zoom</label><select id="pdf-zoom"><option value="0.75">75%</option><option value="1">100%</option><option value="1.25" selected>125%</option><option value="1.5">150%</option><option value="2">200%</option></select></div><form id="pdf-search-form" class="pdf-search" role="search"><label for="pdf-search">Search PDF</label><input id="pdf-search" type="search" placeholder="Find in manual"><button type="submit">Find</button><button type="button" id="pdf-next-match" aria-label="Next search result" disabled>Next result</button></form></div><p id="pdf-status" class="pdf-status" role="status" aria-live="polite">Open the PDF viewer to load a locally supplied manual, if one is present.</p><div id="pdf-stage" class="pdf-stage" tabindex="0" aria-label="PDF page"><div id="pdf-page-wrap" class="pdf-page-wrap"><canvas id="pdf-canvas" aria-hidden="true"></canvas><div id="pdf-text-layer" class="textLayer"></div></div></div></div>
+    </section>
+  </main>
+  <div id="speech-bar" class="speech-bar" role="region" aria-label="Read aloud controls" hidden><div><strong id="speech-title">Ready to read</strong><p id="speech-status" role="status" aria-live="polite"></p></div><div class="speech-actions"><button type="button" id="speech-pause">Pause</button><button type="button" id="speech-stop">Stop</button></div></div>
+  <footer class="site-footer"><div class="wrap"><p>2015 Ford Fusion • 1.5L EcoBoost / 2.0L EcoBoost / 2.5L, plus Hybrid/Energi notes • Check the cited manual page and your vehicle's fitted equipment before service. Hybrid/Energi high-voltage service is dealer work.</p><p id="speech-support"></p></div></footer>
+</body>
+</html>

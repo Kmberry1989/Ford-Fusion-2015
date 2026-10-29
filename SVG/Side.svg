@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1261 832" role="img" aria-label="Side view of a sedan">
+  <rect width="1261" height="832" fill="#0e1e2e"/>
+  <g fill="none" stroke="#7bd4ee" stroke-width="6" stroke-linejoin="round">
+    <path d="M90 560 Q120 480 260 450 L420 300 Q470 260 560 260 L760 260 Q830 260 900 320 L1050 430 Q1160 450 1170 540 L1170 580 L90 580 Z" fill="#1a3445"/>
+    <path d="M450 320 L560 280 L740 280 L860 350 L450 350 Z" fill="#2b5268"/>
+    <path d="M470 360 L560 360 L560 285 M560 360 L740 360" stroke-width="4"/>
+  </g>
+  <g fill="#0b1420" stroke="#7bd4ee" stroke-width="6">
+    <circle cx="300" cy="580" r="95"/><circle cx="300" cy="580" r="40" fill="#2b5268"/>
+    <circle cx="950" cy="580" r="95"/><circle cx="950" cy="580" r="40" fill="#2b5268"/>
+  </g>
+  <g fill="#ffe09a"><rect x="1085" y="470" width="42" height="34" rx="8"/><rect x="95" y="470" width="42" height="34" rx="8"/></g>
+  <text x="630" y="750" text-anchor="middle" fill="#b4c7d2" font-family="sans-serif" font-size="36">2015 Fusion — side (diagram, not to scale)</text>
+</svg>
